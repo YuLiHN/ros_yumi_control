@@ -1,0 +1,21 @@
+<launch>
+
+<!-- adding parameters -->
+
+<!-- <rosparam param="/initial_joint_position/right_arm" >[0.60, -1.45, -0.77,  0.51, -1.67,  1.31,  0.15]</rosparam> -->
+<rosparam param="/initial_joint_position/right_arm" >[0.216, -1.225, -1.027, 0.584, -1.405, 0.831, 0.105]</rosparam>
+
+<param name="JOINT_VELOCITY_LIMIT" type="double" value="0.15" />
+<param name="VELOCITY_CONST" type="double" value="2.0" />
+<param name="ROTATION_CONST" type="double" value="2.0" />
+<param name="MAX_POS_ERR" type="double" value="0.005" />
+<param name="MAX_ROT_ERR" type="double" value="0.01" />
+<param name="ALPHA" type="double" value="0.7" />
+
+<node name="yumi_bimanual_motion" pkg="yumi_controllers" type="yumi_bimanual_motion" output="screen"/>
+
+
+</launch>
+
+
+
