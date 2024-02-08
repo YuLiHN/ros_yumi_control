@@ -10,8 +10,10 @@ find_package(catkin REQUIRED COMPONENTS
   moveit_ros_planning
   moveit_ros_planning_interface
   roscpp
+  hackathon
 )
 find_package(orocos_kdl REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 catkin_package(
   DEPENDS orocos_kdl system_lib
@@ -24,6 +26,7 @@ include_directories(
   include
   ${orocos_kdl_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIRS}
 )
 
 link_directories(${catkin_LIBRARY_DIRS})
